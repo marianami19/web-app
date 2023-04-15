@@ -1,22 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AddSales from './pages/AddSales';
+import TopFive from './pages/TopFive';
+import Login from './pages/Login';
+import Register from './pages/Registration';
+import TotalRevenue from './pages/TotalRev';
 
 function App() {
-  return (
+  return ( 
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <a href='/addsales'>Add sales</a>
+        <a href='/top5'>Top 5 sales</a>
+        <a href='/login'>Login</a>
+        <a href='/register'>Register</a>
+        <a href='/totalrevenue'>Total Revenue</a>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/addsales" element={<AddSales />}></Route>
+          <Route path="/top5" element={<TopFive />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/totalrevenue" element={<TotalRevenue />}></Route>
+        </Routes>
+      </BrowserRouter>
       </header>
     </div>
   );
