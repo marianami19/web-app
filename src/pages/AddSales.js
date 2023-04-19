@@ -2,7 +2,25 @@
 function AddSales() {
   return (
     <div className='container'>
-        Add Sales
+        <form className="row g-3 needs-validation" novalidate>
+  <div className="col-md-4">
+    <label htmlFor="validationCustom01" className="form-label">Product Name</label>
+    <input type="text" className="form-control" id="validationCustom01" value="" required/>
+  </div>
+
+  <div className="col-md-3">
+    <label htmlFor="validationCustom05" className="form-label">Quantity</label>
+    <input type="number" min="0" className="form-control" id="validationCustom05" required/>
+  </div>
+  <div className="col-md-3">
+    <label htmlFor="validationCustom05" className="form-label">Amount</label>
+    <input type="number" step="any" className="form-control" id="validationCustom05" required/>
+  </div>
+
+  <div className="col-12">
+    <button className="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
     </div>
   );
 }

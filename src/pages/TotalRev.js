@@ -2,7 +2,7 @@
 function TotalRevenue() {
     return (
       <div className='container'>
-          Total Revenue
+          Total Revenue is 17500
       </div>
     );
   }
