@@ -2,6 +2,7 @@
 function Register() {
   return (
     <div className='container'>
+      <h3 className="text-center mt-2">Registration</h3>
       <form>
         <div className="mb-3">
           <label htmlFor="validationCustom01" className="form-label">First Name</label>
@@ -18,10 +19,6 @@ function Register() {
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-          <input type="password" className="form-control" id="exampleInputPassword1" />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">Re-Enter Password</label>
           <input type="password" className="form-control" id="exampleInputPassword1" />
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>

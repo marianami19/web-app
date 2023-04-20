@@ -1,7 +1,8 @@
 
 function Login() {
   return (
-    <div className='container'>
+    <div className='container jumbotron'>
+      <h3 className="text-center mt-2">Login</h3>
       <form>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
