@@ -6,11 +6,11 @@ function Register() {
       <form>
         <div className="mb-3">
           <label htmlFor="validationCustom01" className="form-label">First Name</label>
-          <input type="text" className="form-control" id="validationCustom01" value="" required />
+          <input type="text" className="form-control" id="validationCustom01" required />
         </div>
         <div className="mb-3">
           <label htmlFor="validationCustom02" className="form-label">Last Name</label>
-          <input type="text" className="form-control" id="validationCustom02" value="" required />
+          <input type="text" className="form-control" id="validationCustom02" required />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>

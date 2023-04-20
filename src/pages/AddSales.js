@@ -3,10 +3,10 @@ function AddSales() {
   return (
     <div className='container'>
       <h3 className="text-center mt-2">Add Sales</h3>
-      <form className="row g-3 needs-validation" novalidate>
+      <form className="row g-3 needs-validation" noValidate>
         <div className="col-md-4">
           <label htmlFor="validationCustom01" className="form-label">Product Name</label>
-          <input type="text" className="form-control" id="validationCustom01" value="" required />
+          <input type="text" className="form-control" id="validationCustom01" required />
         </div>
 
         <div className="col-md-3">
