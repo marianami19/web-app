@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const  {ObjectId} = mongoose.Schema.Types;
 
 const postSchema = new mongoose.schema({
     prodName: {
@@ -11,5 +12,10 @@ const postSchema = new mongoose.schema({
     }, saleAmount: {
         type: Number,
         required: true
-    },
+    }, user: {
+        type: ObjectId,
+        ref: "UserModel"
+    }
 })
+
+mongoose.model("PostModel", postSchema)
