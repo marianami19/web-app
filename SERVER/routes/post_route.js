@@ -4,6 +4,17 @@ const mongoose = require('mongoose');
 const post_model = mongoose.model('PostModel');
 const protectedRoute = require("../middleware/protectedResource");
 
+router.post("/myposts", protectedRoute, (req, res) => {
+    post_model.find({user: req.user._id})
+    .populate("user", "_id fullName prodName quantity saleAmount ")
+    .then((dbPosts)=> {
+        res.status(200).json({posts: dbPosts})
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+})
+
 router.post("/createPost", protectedRoute, (req, res) => {
     const { prodName, quantity, saleAmount } = req.body;
     //check if any is empty or not

@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
             return res.status(401).json({error: "User not logged in"})
 
         }
-        const {_id} = payload;
+        const {_id} = payload; 
         UserModel.findById(_id)
         .then((dbUser)=> {
             req.user = dbUser;
